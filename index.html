@@ -301,7 +301,7 @@ function syncMuniDots(){
 map.once('moveend',()=>{
   setTimeout(()=>{
     const z0=map.getZoom();
-    map.setMinZoom(z0-1);
+    map.setMinZoom(z0);
     map.setMaxZoom(z0+6);
     map.setMaxBounds(CAT_BOUNDS.pad(0.04));
     map.on('zoomend',()=>{syncComLayer();syncMuniDots();});
